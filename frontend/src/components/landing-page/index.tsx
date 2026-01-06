@@ -1,0 +1,11 @@
+export { NavbarSection } from "./NavbarSection";
+export { HeroSection } from "./HeroSection";
+export { FeaturesSection } from "./FeaturesSection";
+export { WhyChooseUsSection } from "./WhyChooseUsSection";
+export { HowItWorksSection } from "./HowItWorksSection";
+export { ComingFeaturesSection } from "./ComingFeaturesSection";
+export { FooterSection } from "./FooterSection";
+export { ScrollToTopButton } from "../common/ScrollToTopButton";
+export { CTASection } from "./CTASection";
+export { ContactSection } from "./ContactSection";
+export { EncryptionVideoSection } from "./EncryptionVideoSection";
