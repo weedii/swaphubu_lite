@@ -22,7 +22,7 @@ export const ContactSection = () => {
           </div>
 
           {/* Contact Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 max-w-4xl mx-auto">
             {/* Telegram Card */}
             <div className="group bg-gradient-to-br from-gray-900/80 to-gray-800/60 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-orange-500/20">
               <div className="flex flex-col items-center text-center">
@@ -87,62 +87,6 @@ export const ContactSection = () => {
                 </Link>
               </div>
             </div>
-
-            {/* P2P Platforms Card */}
-            <div className="group bg-gradient-to-br from-gray-900/80 to-gray-800/60 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-orange-500/20">
-              <div className="flex flex-col items-center text-center">
-                <div className="w-14 h-14 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <Globe className="w-7 h-7 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold mb-2 text-white">
-                  P2P Trading
-                </h3>
-                <p className="text-gray-400 text-sm mb-4">
-                  Find us on platforms
-                </p>
-                <div className="w-full flex flex-wrap items-center justify-center gap-3">
-                  {/* OKX */}
-                  <div className="flex items-center justify-center space-x-2 p-2 bg-gray-800/50 rounded-lg hover:bg-gray-700/50 transition-colors duration-200 cursor-pointer">
-                    <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
-                      <span className="text-white text-xs font-bold">O</span>
-                    </div>
-                    <span className="text-orange-400 font-medium text-sm">
-                      OKX
-                    </span>
-                  </div>
-
-                  {/* Gate.io */}
-                  <div className="flex items-center justify-center space-x-2 p-2 bg-gray-800/50 rounded-lg hover:bg-gray-700/50 transition-colors duration-200 cursor-pointer">
-                    <div className="w-6 h-6 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center">
-                      <span className="text-white text-xs font-bold">G</span>
-                    </div>
-                    <span className="text-orange-400 font-medium text-sm">
-                      Gate.io
-                    </span>
-                  </div>
-
-                  {/* KuCoin */}
-                  <div className="flex items-center justify-center space-x-2 p-2 bg-gray-800/50 rounded-lg hover:bg-gray-700/50 transition-colors duration-200 cursor-pointer">
-                    <div className="w-6 h-6 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center">
-                      <span className="text-white text-xs font-bold">K</span>
-                    </div>
-                    <span className="text-orange-400 font-medium text-sm">
-                      KuCoin
-                    </span>
-                  </div>
-
-                  {/* Bybit */}
-                  <div className="flex items-center justify-center space-x-2 p-2 bg-gray-800/50 rounded-lg hover:bg-gray-700/50 transition-colors duration-200 cursor-pointer">
-                    <div className="w-6 h-6 bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center">
-                      <span className="text-white text-xs font-bold">B</span>
-                    </div>
-                    <span className="text-orange-400 font-medium text-sm">
-                      Bybit
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Call to Action */}
@@ -183,4 +127,3 @@ export const ContactSection = () => {
     </section>
   );
 };
- 

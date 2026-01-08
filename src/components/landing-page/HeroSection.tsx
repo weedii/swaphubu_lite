@@ -42,13 +42,13 @@ export const HeroSection = () => {
           </div>
 
           {/* Heading */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-16 text-white">
             SwapHubu – Your Trusted <span className="text-primary">Crypto</span>{" "}
             Exchange Partner
-            <br />
+            {/* <br />
             <span className="block mt-2 text-2xl md:text-3xl lg:text-4xl">
               Powered by <span className="text-primary">BinaryPie</span>
-            </span>
+            </span> */}
           </h1>
 
           {/* Subheading */}
