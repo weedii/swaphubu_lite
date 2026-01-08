@@ -186,7 +186,7 @@ export const ComingFeaturesSection = () => {
           <div className="mb-8">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               🔶 Full Website{" "}
-              <span className="text-primary bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
                 Coming Soon!
               </span>
             </h2>
