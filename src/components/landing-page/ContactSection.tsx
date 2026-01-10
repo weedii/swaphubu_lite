@@ -59,12 +59,12 @@ export const ContactSection = () => {
                   Quick voice & text chat
                 </p>
                 <Link
-                  href="https://wa.me/447727843222"
+                  href="https://wa.me/447449712038"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-orange-400 hover:text-orange-300 font-medium text-sm transition-colors duration-200"
                 >
-                  +44 7727 843222
+                  +44 7449 712038
                 </Link>
               </div>
             </div>
@@ -111,7 +111,7 @@ export const ContactSection = () => {
                   Start on Telegram
                 </Link>
                 <Link
-                  href="https://wa.me/447727843222"
+                  href="https://wa.me/447449712038"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-8 py-3 bg-transparent border border-orange-500 hover:bg-orange-500/10 text-orange-400 hover:text-orange-300 font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/25"

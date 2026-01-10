@@ -91,7 +91,7 @@ export const FooterSection = () => {
               <p className="flex items-center gap-2 text-gray-400 hover:text-primary transition-colors w-fit">
                 <Phone className="w-4 h-4" />
                 <Link
-                  href="https://wa.me/447727843222"
+                  href="https://wa.me/447449712038"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

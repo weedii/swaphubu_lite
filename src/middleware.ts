@@ -10,7 +10,8 @@ const authRoutes: string[] = [
 ];
 
 // Define public routes that don't require authentication
-const publicRoutes: string[] = ["/", "/landing-page"];
+// const publicRoutes: string[] = ["/", "/landing-page"];
+const publicRoutes: string[] = ["/"];
 
 // Define admin routes that require admin authentication
 const adminRoutes: string[] = ["/admin"];
@@ -18,29 +19,34 @@ const adminRoutes: string[] = ["/admin"];
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
+  // Force redirect to "/" for any route that's not "/"
+  if (pathname !== "/") {
+    return NextResponse.redirect(new URL("/", request.url));
+  }
+
   // For local auth, we'll check authentication on the client side
   // Middleware will only handle basic routing logic
 
   // Allow access to public routes
-  if (
-    publicRoutes.some(
-      (route) => pathname === route || pathname.startsWith(route)
-    )
-  ) {
-    return NextResponse.next();
-  }
+  // if (
+  //   publicRoutes.some(
+  //     (route) => pathname === route || pathname.startsWith(route)
+  //   )
+  // ) {
+  //   return NextResponse.next();
+  // }
 
   // Allow access to auth routes
-  if (
-    authRoutes.some((route) => pathname === route || pathname.startsWith(route))
-  ) {
-    return NextResponse.next();
-  }
+  // if (
+  //   authRoutes.some((route) => pathname === route || pathname.startsWith(route))
+  // ) {
+  //   return NextResponse.next();
+  // }
 
   // Allow access to admin routes (authentication will be checked client-side)
-  if (adminRoutes.some((route) => pathname.startsWith(route))) {
-    return NextResponse.next();
-  }
+  // if (adminRoutes.some((route) => pathname.startsWith(route))) {
+  //   return NextResponse.next();
+  // }
 
   return NextResponse.next();
 }

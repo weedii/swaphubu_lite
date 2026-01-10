@@ -30,20 +30,20 @@ export const NavbarSection = () => {
 
   return (
     <nav className="sticky top-0 left-0 right-0 z-30 py-4 bg-zinc-950 border-b border-gray-800">
-      <div className="container mx-auto px-4 max-w-7xl">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <Image
-              src="/assets/swaphubu_logo-B9BPaYze.png"
-              alt="SwapHubu Logo"
-              width={150}
-              height={40}
-              className="h-[40px] w-[150px] object-contain"
-              unoptimized
-            />
-          </Link>
+      <div className="container mx-auto px-4 max-w-7xl flex">
+        {/* Logo */}
+        <Link href="/" className="flex items-center flex-1">
+          <Image
+            src="/assets/swaphubu_logo-B9BPaYze.png"
+            alt="SwapHubu Logo"
+            width={150}
+            height={40}
+            className="h-[40px] w-[150px] object-contain"
+            unoptimized
+          />
+        </Link>
 
+        <div className="flex items-center justify-center">
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
@@ -58,7 +58,7 @@ export const NavbarSection = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="flex items-center space-x-4">
+          {/* <div className="flex items-center space-x-4">
             <GradientLink
               href="/signin"
               className="hidden md:flex w-fit px-8"
@@ -66,12 +66,7 @@ export const NavbarSection = () => {
             >
               Get Started
             </GradientLink>
-
-            {/* <Separator
-              orientation="vertical"
-              className="h-10 hidden md:block"
-            /> */}
-          </div>
+          </div> */}
 
           {/* Mobile Menu */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
