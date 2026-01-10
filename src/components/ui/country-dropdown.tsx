@@ -90,6 +90,8 @@ const CountryItem = React.memo(
   )
 );
 
+CountryItem.displayName = "CountryItem";
+
 // Country interface
 export interface Country {
   alpha2: string;

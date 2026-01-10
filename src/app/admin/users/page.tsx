@@ -100,6 +100,7 @@ export default function UsersPage() {
 
   useEffect(() => {
     loadUsers(currentFilters);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleFilter = (params: UserSearchParams) => {

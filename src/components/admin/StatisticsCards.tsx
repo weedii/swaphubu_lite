@@ -242,9 +242,9 @@ export function StatisticsCards({
                               10,
                               (item.count /
                                 Math.max(
-                                  ...statistics.monthly_registrations.map(
-                                    (m) => m.count
-                                  )
+                                  ...(
+                                    statistics.monthly_registrations ?? []
+                                  ).map((m) => m.count)
                                 )) *
                                 100
                             )}%`,

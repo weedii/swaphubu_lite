@@ -175,7 +175,7 @@ export function useAdminError(
       error: loading.error,
       hasError: !!loading.error,
     }),
-    [loading] // Only depend on loading state since functions are stable
+    [loading, setLoading, setError, clearError, executeAction, handleError]
   );
 }
 
@@ -192,7 +192,7 @@ export function useAdminUserActions() {
       return errorHandler.executeAction(
         async () => {
           const { blockUser: blockUserAction } = await import(
-            "@/actions/admin/users"
+            "@/actions/admin"
           );
           const result = await blockUserAction(userId);
           return result;
@@ -214,7 +214,7 @@ export function useAdminUserActions() {
       return errorHandler.executeAction(
         async () => {
           const { unblockUser: unblockUserAction } = await import(
-            "@/actions/admin/users"
+            "@/actions/admin"
           );
           const result = await unblockUserAction(userId);
           return result;
@@ -235,14 +235,12 @@ export function useAdminUserActions() {
     async (userId: string, updateData: any, userName?: string) => {
       return errorHandler.executeAction(
         async () => {
-          const { updateUserAdminFields } = await import(
-            "@/actions/admin/users"
-          );
+          const { updateUserAdminFields } = await import("@/actions/admin");
           const result = await updateUserAdminFields(userId, updateData);
-          // Transform the result to match expected format
+          // Result already has correct format
           return {
             success: result.success,
-            data: result.user,
+            data: result.data,
             message: result.message,
           };
         },
@@ -292,7 +290,7 @@ export function useAdminDataLoader<T>(
 
       return result;
     },
-    [errorHandler.executeAction, loadFunction, key, isInitialLoad]
+    [errorHandler, loadFunction, key, isInitialLoad]
   );
 
   const refreshData = useCallback(() => {

@@ -39,8 +39,8 @@ interface UserTableProps {
   users: User[];
   onViewUser: (user: User) => void;
   onEditUser: (user: User) => void;
-  onBlockUser: (userId: string) => void;
-  onUnblockUser: (userId: string) => void;
+  onBlockUser: (userId: string) => Promise<void>;
+  onUnblockUser: (userId: string) => Promise<void>;
   loading?: boolean;
 }
 

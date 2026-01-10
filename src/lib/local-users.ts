@@ -42,15 +42,24 @@ export interface UserStatistics {
   blocked_users: number;
   admin_users: number;
   recent_registrations: number; // Last 7 days
+  users_by_country?: Record<string, number>;
+  monthly_registrations?: Array<{ month: string; count: number }>;
 }
 
 export interface UserSearchParams {
   page?: number;
   limit?: number;
   search?: string;
+  search_term?: string;
   filter?: "all" | "verified" | "unverified" | "blocked" | "admin";
-  sort_by?: "created_at" | "first_name" | "last_name" | "email";
+  sort_by?: "created_at" | "updated_at" | "first_name" | "last_name" | "email";
   sort_order?: "asc" | "desc";
+  country?: string;
+  is_verified?: boolean;
+  is_blocked?: boolean;
+  is_admin?: boolean;
+  registration_start?: string;
+  registration_end?: string;
 }
 
 // Storage key
