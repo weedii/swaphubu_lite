@@ -1,5 +1,6 @@
+import LandingPage from "@/components/landing-page/LandingPage";
 import { generateMetadata } from "@/lib/metadata";
-import LandingPage from "./landing-page/page";
+
 
 export const metadata = generateMetadata({
   title: "Home",

@@ -51,7 +51,7 @@ export default function LandingPage() {
         <ComingFeaturesSection />
       </AnimatedSection>
 
-      <AnimatedSection>
+      <AnimatedSection className="hidden lg:block">
         <EncryptionVideoSection />
       </AnimatedSection>
 
